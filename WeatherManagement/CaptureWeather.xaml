@@ -1,0 +1,33 @@
+﻿<Window x:Class="WeatherManagement.CaptureWeather"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeatherManagement"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="Wetter Erfassen" Height="410" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Datum" VerticalAlignment="Top" Width="260" FontSize="14" Grid.Row="0" Margin="0,4,0,0" FontWeight="Bold"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Width="260" Grid.Row="0" Cursor="Hand" SelectedDateFormat="Long" FontSize="14" IsTodayHighlighted="True" FirstDayOfWeek="Monday"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,11,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Uhrzeit" VerticalAlignment="Top" FontSize="14" Width="260" FontWeight="Bold"/>
+        <TextBox x:Name="txtTime" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontSize="14"/>
+        <TextBox x:Name="txtTemperature" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontSize="14" ToolTip=""/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,9,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Verhältnisse" VerticalAlignment="Top" FontSize="14" Width="260" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Kommentar" VerticalAlignment="Top" FontSize="14" Width="260" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Temperatur in °C" VerticalAlignment="Top" FontSize="14" Width="260" FontWeight="Bold"/>
+        <ComboBox x:Name="comboBoxType" HorizontalAlignment="Center" Margin="0,29,0,0" Grid.Row="2" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="commentBox" HorizontalAlignment="Center" Margin="0,30,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontSize="14"/>
+        <Button x:Name="bttnCancel" Content="Abbrechen" HorizontalAlignment="Left" Margin="12,25,0,0" Grid.Row="5" VerticalAlignment="Top" Width="125" Height="35" IsCancel="True"/>
+        <Button x:Name="bttnSave" Content="Speichern" HorizontalAlignment="Left" Margin="147,25,0,0" Grid.Row="5" VerticalAlignment="Top" Width="125" Height="35" IsDefault="True" Click="bttnSave_Click"/>
+        <TextBlock x:Name="txtMessage" HorizontalAlignment="Center" Margin="0,1,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260" FontSize="14"/>
+    </Grid>
+</Window>
